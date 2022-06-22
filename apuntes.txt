@@ -40,3 +40,14 @@ Ver la ubicacion de las configuraciones guardadas
 Cambiar el nombre de usuario y contraseña
     $git config --global user.name "nombre"
     $git config --global user.email "correo"
+
+**Ver el historial de commits de un archivo**
+
+    $git log "nombre.extension"
+
+**Diferencias entre dos versiones de un archivo**
+
+    $git diff commitA commitB
+
+Donde commitA es el commit original y commitB el mas reciente (simplemente para los fines de comparación)
+commitA y commitB se obtienen de $git log "nombre.extension"
