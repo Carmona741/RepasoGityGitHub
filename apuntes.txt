@@ -1,0 +1,27 @@
+**Inicialización de git**
+Para iniciar git en un proyecto se ejecuta el siguiente comando en la carpeta raiz
+    $git init
+
+esto crea una carpeta .git ($ls -al) y en automatico se llevara un seguimiento del proyecto
+
+**Checar el estado**
+Para checar el estado de nuestro proyecto, mostrando archivos nuevos, archivos con cambios y demás, 
+se ejecuta el siguiente comando 
+    $git status
+
+mostrará la rama en la que nos encontramos junto con el estado de los archivos pertinentes.
+
+Estados.
+untracked: no se ha enviado al stage (memoria RAM) 
+modified: el archivo ha sido modificado y no coincide con el del stage
+
+**Agregar archivos al stage**
+Antes de guardar un cambio en la rama master, se cargan los archivos en el stage que es un espacio en la memoria RAM.
+Para agregar a un archivo se utiliza el siguiente comando   
+    $git add "nombre.extencion"
+Para agregar TODOS los archivos se ejecuta el siguiente comando 
+    $git add .
+
+**Remover un archivo del stage**
+En caso de que se desee eliminar un archivo del stage muy posiblemente porque se cometió un error, se ejecuta
+    $git restore --staged  "nombre.extencion"
