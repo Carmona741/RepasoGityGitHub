@@ -18,10 +18,25 @@ modified: el archivo ha sido modificado y no coincide con el del stage
 **Agregar archivos al stage**
 Antes de guardar un cambio en la rama master, se cargan los archivos en el stage que es un espacio en la memoria RAM.
 Para agregar a un archivo se utiliza el siguiente comando   
-    $git add "nombre.extencion"
+    $git add "nombre.extension"
 Para agregar TODOS los archivos se ejecuta el siguiente comando 
     $git add .
 
 **Remover un archivo del stage**
 En caso de que se desee eliminar un archivo del stage muy posiblemente porque se cometió un error, se ejecuta
-    $git restore --staged  "nombre.extencion"
+    $git restore --staged  "nombre.extension"
+
+Otra forma de actualizar los cambios en el stage es volviendo a ejecutar el comando 
+    $git add "nombre.extension"
+
+**Configuración de usuario**
+Checar los valores de la configuracion por defecto
+    $git config --list
+
+Ver la ubicacion de las configuraciones guardadas
+
+    $git config --list --show-origin
+
+Cambiar el nombre de usuario y contraseña
+    $git config --global user.name "nombre"
+    $git config --global user.email "correo"
