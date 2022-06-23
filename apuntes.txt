@@ -82,3 +82,24 @@ hotfix (en donde se corrigen los bugs que urgen)
 
 Para unir dos ramas se utiliza el comando $merge pero puede causar conflictos cuando el contenido
 de un archivo es diferente en dos ramas distintas.
+
+**Viajes en el tiempo**
+
+PELIGRO
+$git reset commitID --soft
+$git reset commitID --hard
+
+El primer comando se borra el historial en el repositorio y se deja como header a commitID PERO se dejan
+los cambios en staging.
+Con el segundo comando se borra TODO; historial, staging y directorio de trabajo dejando como header a commitID.
+
+Para viajar cambiar de commit (viajar al pasado o futuro) se ejecuta el siguiente comando
+    $git checkout commitID "nombre.extension"
+
+Para regresar al header
+    $git checkout master "nombre.extension"
+
+Nota: es importante tener en cuenta que al ejecutar checkout el archivo del directorio de trabajo cambia,
+puediendo tener una version vieja y si se hace un commit entonces se estaria reemplazando la última version 
+por esta junto con sus respectivos cambios. Por eso, es importante que si solo se quiere echar un vistazo, 
+al finalizar se ejecute el comando $git checkout main "nombre.extension".
