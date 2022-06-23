@@ -2,7 +2,8 @@
 Para iniciar git en un proyecto se ejecuta el siguiente comando en la carpeta raiz
     $git init
 
-esto crea una carpeta .git ($ls -al) y en automatico se llevara un seguimiento del proyecto
+esto crea una carpeta .git ($ls -al  para ver) y en automatico se llevara un seguimiento del proyecto.
+Nota: la carpeta .git es la carpeta de nuestro repositorio
 
 **Checar el estado**
 Para checar el estado de nuestro proyecto, mostrando archivos nuevos, archivos con cambios y demás, 
@@ -11,9 +12,29 @@ se ejecuta el siguiente comando
 
 mostrará la rama en la que nos encontramos junto con el estado de los archivos pertinentes.
 
-Estados.
-untracked: no se ha enviado al stage (memoria RAM) 
-modified: el archivo ha sido modificado y no coincide con el del stage
+**Estados**
+Para poder hablar de estados, primero hay que definir 3 areas existentes al usar git: 
+Directorio de trabajo, area de staging y repositorio de git.
+
+untracked: git no tiene registro de estos archivos, solo existen en el area de trabajo.
+    No se ha ejecutado add, mucho menos commit.
+
+staged: git ya tiene registro de estos archivos (o no solamente en el caso de archivos nuevos) pero  
+hay una diferencia entre la version en el area de staging y el del repositorio.
+    se ejecuto add pero no commit.
+
+modified: el archivo ha sido modificado y no coinciden las versiones entre el area de trabajo y el area de
+staging.
+    se ejecuto add y luego se realizo un cambio antes de hacer un commit
+
+unstaged: se refiere a un archivo del cual ya existe registo en el repositorio (ya se le han realizado add(s) y commit(s))
+pero se realizo un cambio en el directorio de trabajo.
+Nota importante: a la fecha en la que se toma el curso (22/06/2022) ya no se usa este estado, se usa modified.
+
+tracked: son archivos actualizados (no han sufrido cambios) y viven en el repositorio.
+Se ha ejecutado add y commit de forma satisfactoria.
+Nota: las versiones del directorio de trabajo y el repositorio coinciden.
+
 
 **Agregar archivos al stage**
 Antes de guardar un cambio en la rama master, se cargan los archivos en el stage que es un espacio en la memoria RAM.
