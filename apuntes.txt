@@ -47,6 +47,11 @@ Para agregar TODOS los archivos se ejecuta el siguiente comando
 En caso de que se desee eliminar un archivo del stage muy posiblemente porque se cometió un error, se ejecuta
     $git restore --staged  "nombre.extension"
 
+**Dejar de trackear un archivo**
+Para eliminar un archivo del stagingy del repositorio se utiliza 
+    $git rm --cached "nombre.extension"
+Nota: El archivo pasa a estado untracked.
+
 Otra forma de actualizar los cambios en el stage es volviendo a ejecutar el comando 
     $git add "nombre.extension"
 
@@ -70,9 +75,12 @@ Cambiar el nombre de usuario y contraseña
 
     $git diff commitA commitB
 
+
 Donde commitA es el commit original y commitB el mas reciente (simplemente para los fines de comparación)
 commitA y commitB se obtienen de $git log "nombre.extension"
 
+Para ver los cambios que se le hizo a un archivo con respecto a la última version en el repositorio se ejecuta
+    $git diff master
 
 **Ramas**
 Las ramas usadas comunmente en el desarrollo de un proyecto son:
@@ -89,7 +97,7 @@ PELIGRO
 $git reset commitID --soft
 $git reset commitID --hard
 
-El primer comando se borra el historial en el repositorio y se deja como header a commitID PERO se dejan
+El primer comando se borra el historial en el repositorio y deja como header a commitID JUNTO con
 los cambios en staging.
 Con el segundo comando se borra TODO; historial, staging y directorio de trabajo dejando como header a commitID.
 
