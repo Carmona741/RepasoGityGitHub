@@ -72,3 +72,13 @@ Cambiar el nombre de usuario y contraseña
 
 Donde commitA es el commit original y commitB el mas reciente (simplemente para los fines de comparación)
 commitA y commitB se obtienen de $git log "nombre.extension"
+
+
+**Ramas**
+Las ramas usadas comunmente en el desarrollo de un proyecto son:
+main (antiguamente llamada master)
+development (en donde se realizan los experimentos)
+hotfix (en donde se corrigen los bugs que urgen)
+
+Para unir dos ramas se utiliza el comando $merge pero puede causar conflictos cuando el contenido
+de un archivo es diferente en dos ramas distintas.
