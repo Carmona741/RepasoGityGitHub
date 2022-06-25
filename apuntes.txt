@@ -109,6 +109,10 @@ $git branch -b <nombre>
 $git branch -m <nombre_original> <nombre_nuevo>
 
 **Moverse a otra rama**
+IMPORTANTE!!!!
+    Antes de moverse a otra rama es importante guardar los cambios en un commit sino todo 
+    se perderá.
+
 $git checkout <nombre_rama>
 
 **Listar ramas existentes**
