@@ -43,9 +43,16 @@ Para agregar a un archivo se utiliza el siguiente comando
 Para agregar TODOS los archivos se ejecuta el siguiente comando 
     $git add .
 
+Los archivos que no son nuevos (ya existen commits previos) se pueden agregar al area staging y hacer un commit
+al mismo tiempo con el comando 
+    $git commit -am "descripcion"
+
 **Remover un archivo del stage**
 En caso de que se desee eliminar un archivo del stage muy posiblemente porque se cometió un error, se ejecuta
     $git restore --staged  "nombre.extension"
+
+Otra forma de actualizar los cambios en el stage es volviendo a ejecutar el comando 
+    $git add "nombre.extension"
 
 **Dejar de trackear un archivo**
 Para eliminar un archivo del stagingy del repositorio se utiliza 
@@ -81,8 +88,9 @@ commitA y commitB se obtienen de $git log "nombre.extension"
 
 Para ver los cambios que se le hizo a un archivo con respecto a la última version en el repositorio se ejecuta
     $git diff master
+    $git diff --staged (diferencia entre directorio de trabajo y staging area)
 
-**Ramas**
+--- Ramas ---
 Las ramas usadas comunmente en el desarrollo de un proyecto son:
 main (antiguamente llamada master)
 development (en donde se realizan los experimentos)
@@ -90,6 +98,30 @@ hotfix (en donde se corrigen los bugs que urgen)
 
 Para unir dos ramas se utiliza el comando $merge pero puede causar conflictos cuando el contenido
 de un archivo es diferente en dos ramas distintas.
+
+**Crear una rama**
+$git branch <nombre>
+
+**Crear una rama y moverse a ella**
+$git branch -b <nombre>
+
+**Renombrar una rama**
+$git branch -m <nombre_original> <nombre_nuevo>
+
+**Moverse a otra rama**
+$git checkout <nombre_rama>
+
+**Listar ramas existentes**
+Muestra en con un asterisco y en verde la rama en la que nos encontramos
+$git branch -l
+
+**Eliminar una rama**
+$git branch -d <nombre>
+Para forzar la eliminacion usar la bandera -D
+
+**Graficar ramas**
+Se grafica el flujo de trabajo con las distintas ramas
+    $git log --graph
 
 **Viajes en el tiempo**
 
