@@ -25,3 +25,5 @@ Si se desea cargar un repositorio de Git local a GitHub entonces se deben seguir
 6. Hacer un push al repositorio remoto
   Para mandar el repositorio local al remoto hay que hacer un push
   $git push origin master
+
+Y listo, ya deberían de estar actualizados tanto el repositorio local como el de GitHub (:
