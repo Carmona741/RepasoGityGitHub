@@ -1,0 +1,19 @@
+Cuando se quiere mandar información a través de un lugar público como lo es internet, se tiene que usar 
+algún método de cifrado para proteger dicha información. Un método bastantes seguro es el cifrado asimétrico
+de un solo camino. 
+
+Este método de cifrado hace uso de dos llaves; una pública y otra privada. La pública puede tenerla cualquiera
+pero es de vital importancia que la privada solamente la tenga la persona que desea descifrar la información.
+Debido a esto entonces, si algúna persona agena (hacker) lograra conseguir la llave privada entonces nuestra 
+información ha sido interceptada.
+
+¿Cómo funciona el cifrado asimétrico?
+
+Tanto la llave privada como la pública se generan meditante un procedimiento matemático (algo sencillo), 
+sin embargo, la importancia radica en que ambas llaves están relacionadas o vinculadas y es por ello 
+que solamente la llave privada puede descifrar la información cifrada con la llave pública.
+
+Si se intentara descifrar la información por fuerza bruta, tomaría MUCHISIMO tiempo lograrlo, por lo que las
+probabilidades de éxito son casi nulas. 
+
+Debido a su seguridad, el cifrado asimétrico o "de un solo camino" es usado en el mundo de las finanzas.
