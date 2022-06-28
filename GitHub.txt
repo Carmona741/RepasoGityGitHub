@@ -1,0 +1,27 @@
+Si se desea cargar un repositorio de Git local a GitHub entonces se deben seguir los siguientes pasos.
+
+1. Crear un nuevo repositorio en GitHub.
+  No se elige la opción importar debido a que esta opción trae un repositorio de OTRO sistema de control de versiones. Son cosas diferentes
+
+2. Copiar el link del repo creado.
+  Se elige el metodo de seguridad para el link de clonación (clone url), puede ser https o SSH.
+
+3. Agregar un origin en el repositorio local.
+  $git remote add origin <clone url>
+  
+4. Comprobar que se agregó con exito
+  $git remote
+  $git remote -v (verbal: mostrará el link del repositorio remoto)
+  Debe de aparecer un origin
+
+5. Hacer un pull para actualizar los repositorios y poder hacer futuros push.
+  Git no hará un push hasta que hagamos un pull debido a que para él son distintas historias y no sabe si el contenido está relacionado.
+  Para eso entonces se actualiza.
+  $git pull origin master
+  
+  Si aparece "fatal: refusing to merge unrelated histories" 
+  $git pull origin master --allow-unrelated-histories
+  
+6. Hacer un push al repositorio remoto
+  Para mandar el repositorio local al remoto hay que hacer un push
+  $git push origin master
