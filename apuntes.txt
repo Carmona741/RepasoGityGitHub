@@ -170,7 +170,7 @@ Borrar un tag
     $git tag -d <nombre_tag>        (Lo elimina en el repo local)
 
 Forzar la eliminación de un tag en GitHub
-    $git push origin:refs/tags/<nombre_tag>
+    $git push origin :refs/tags/<nombre_tag>
 
 
 
