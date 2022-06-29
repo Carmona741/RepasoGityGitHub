@@ -13,6 +13,17 @@ Tanto la llave privada como la pública se generan meditante un procedimiento ma
 sin embargo, la importancia radica en que ambas llaves están relacionadas o vinculadas y es por ello 
 que solamente la llave privada puede descifrar la información cifrada con la llave pública.
 
+Entonces, cuando dos personas desean compartir información haciendo uso del cifrado simétrico, el destinatario debe 
+generar sus llaves y compartir con el remitente SOLAMENTE su llave pública, para que este cifre la información con
+esta llave. Así el mensaje viajará a salvo y solamente el destinatario podrá descifrar la información con la llave
+privada (debido a la vinculación entre ellas).
+
+La llave pública se puede hacer llegar mediante cualquier método, pues no importa que terceras personas la tengan.
+La importante es la privada y SOLAMENTE el destinatario debe guardarla.
+
+Entonces, siguiendo esta lógica, ambas personas, tanto remitente como destinatario pueden generar sus llaves e 
+intercambiar sus llaves públicas para una comunicación segura.
+
 Si se intentara descifrar la información por fuerza bruta, tomaría MUCHISIMO tiempo lograrlo, por lo que las
 probabilidades de éxito son casi nulas. 
 
