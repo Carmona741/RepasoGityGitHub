@@ -78,3 +78,19 @@ Agregar la llave privada
     $ssh-add "ruta de llave privada"
 
     Ejemplo: $ssh-add ~/.ssh/id_rsa
+    
+
+**Configuración de llaves con GitHub**
+Las llaves creadas en los pasos anteriores existen de manera local en la PC pero aún falta copiar la llave pública a GitHub y cambiar el repositorio remoto en Git.
+Como nota adicional, se recomienda crear una llave pública y una privada para CADA computadora que se tiene.
+
+Copiar la llave pública en GitHub
+1. Iniciar sesión. Ir al apartado Settings/Acess/SSH and GPG keys y copiar la llave PÚBLICA.
+2. Cambiar el repositorio remoto (origin por defecto) en Git 
+    2.1 Ir al repositorio de interés, click en "code", seleccionar SSH y copiar el link
+    2.2 Mostrar el link del origin
+        $ git remote -v
+    2.3 Cambiar el link
+        $git remote set-url origin <link del paso 2.1>
+    2.4 Verificar los cambios
+        $git remote -v
