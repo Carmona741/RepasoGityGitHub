@@ -94,3 +94,5 @@ Copiar la llave pública en GitHub
         $git remote set-url origin <link del paso 2.1>
     2.4 Verificar los cambios
         $git remote -v
+
+Listo (: ya debería de poderse mandar y traer cambios de GitHub
