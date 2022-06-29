@@ -28,3 +28,53 @@ Si se intentara descifrar la información por fuerza bruta, tomaría MUCHISIMO t
 probabilidades de éxito son casi nulas. 
 
 Debido a su seguridad, el cifrado asimétrico o "de un solo camino" es usado en el mundo de las finanzas.
+
+
+**Creación de llaves y configuración de entorno local**
+
+Una desventaja que tiene la conección por https entre Git y GitHub es que se tiene que estar iniciando sesión
+a cada rato. Para evitar esto y por mayor seguridad se utiliza el protocolo SSH (secure shell) cifrando así los datos
+con 128 bits impidiendo el descifrado por fuerza bruta.
+
+Además con https se podrían usar ataques con paquetes sniffer (intercepción del tráfico de red y manipulación)
+o suplantación de identidad de un determinado host con técnicas de envenenamiento DNS o spoofing de IP.
+
+-- Comandos --
+
+
+Se recomienda estar en el home pues las llaves se generan por usuario, NO por repositorio.
+    $cd 
+    $cd ~       (~ es una variable que guarda el directorio de nuestro usuario)
+
+
+Creación de las llaves con algoritmo rsa (factorización de enteros)
+    $ssh-keygen -t rsa -b 4096 -C "email-personal"
+
+Explicación del comando.
+    ssh-keygen: Se genera una nueva llave
+    -t rsa: Se especifica que el algoritmo a usar es rsa
+    -b 4096: La complejidad del algoritmo será 4096
+    -C "email-personal": Se indica a qué correo va a estar conectada esta llave
+
+1. Especificar la ruta en la que se guardará la llave   
+    Si se desea usar la ruta por defecto
+
+2. Passphrase (contraseña con espacios)
+    Se ingresa la contraseña alfa numérica a usar para poder abrir las llaves. 
+    Enter para no usar contraseña (Se recomienda usar una)
+
+3. Notas.
+    Keyfingerprint: Es una forma de confirmar que la contraseña es verídica (real)
+    Key randomart: Otra forma de compartir la llave
+
+
+Comprobar que el agente ssh está corriendo
+    $eval $(ssh-agent -s)
+
+    Debe de mostrar el pID si está funcionando de forma correcta
+
+Agregar la llave privada
+
+    $ssh-add "ruta de llave privada"
+
+    Ejemplo: $ssh-add ~/.ssh/id_rsa
