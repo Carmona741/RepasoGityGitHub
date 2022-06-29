@@ -126,6 +126,7 @@ Para forzar la eliminacion usar la bandera -D
 **Graficar ramas**
 Se grafica el flujo de trabajo con las distintas ramas
     $git log --graph
+    $git log --all --graph --decorate --oneline (Gráfica más presentable de toda la historia)
 
 **Viajes en el tiempo**
 
@@ -147,3 +148,47 @@ Nota: es importante tener en cuenta que al ejecutar checkout el archivo del dire
 puediendo tener una version vieja y si se hace un commit entonces se estaria reemplazando la última version 
 por esta junto con sus respectivos cambios. Por eso, es importante que si solo se quiere echar un vistazo, 
 al finalizar se ejecute el comando $git checkout main "nombre.extension".
+
+
+**Tags**
+
+Los tags son útiles especialmente en GitHub para indicar "releases", es decir, versión 1, versión 2, étc.
+En Git es muy raro que se utilicen a menos que sea con propósitos de referencias internas.
+A continuación se enlistan los comandos para manejo de Tags.
+
+Crear un tag
+    $git tag -a <nombre_tag> -m "Descripcion del tag" commitID
+
+Listar tags existentes
+    $git tag
+    $git show-ref --tags    (Muestra los commits a los que están asignados)
+
+Enviar los tags a un repositorio remoto
+    $git push origin --tags
+
+Borrar un tag
+    $git tag -d <nombre_tag>        (Lo elimina en el repo local)
+
+Forzar la eliminación de un tag en GitHub
+    $git push origin:refs/tags/<nombre_tag>
+
+
+
+
+**Anexo**
+
+Renombrar comandos en Linux con alias
+    $alias <nombre>="comando"
+
+Agregar un alias SOLO para Git
+
+    Solamente para un repositorio
+        $git config alias.<nombre> "comando"
+
+    Global
+        $git config --global alias.<nombre> "comando"
+
+Nota: "comando" no debe de contener la palabra reservada git
+
+Para correrlo
+    $git nombre
