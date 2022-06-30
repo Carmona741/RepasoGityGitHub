@@ -175,6 +175,10 @@ Borrar un tag
 Forzar la eliminación de un tag en GitHub
     $git push origin :refs/tags/<nombre_tag>
 
+Traer los tags de GitHub a Git
+    $git pull --tags
+    $git fetch --tags
+    $git fetch --all --tags
 
 
 
