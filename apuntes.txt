@@ -128,6 +128,9 @@ Se grafica el flujo de trabajo con las distintas ramas
     $git log --graph
     $git log --all --graph --decorate --oneline (Gráfica más presentable de toda la historia)
 
+**Mandar ramas a GitHub**
+    $git push origin <nombre_rama>
+
 **Viajes en el tiempo**
 
 PELIGRO
