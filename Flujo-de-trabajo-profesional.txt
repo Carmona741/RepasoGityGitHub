@@ -41,7 +41,7 @@ Hay quienes la borran y hay quienes no.
 
 **Pull request sin ser colaborador**
 
-En proyectos de código abierto, suelen haber "" que únicamente pueden clonar el proyecto e irlo actualizando
+En proyectos de código abierto, suelen haber contribuyentes que únicamente pueden clonar el proyecto e irlo actualizando
 pero no tienen permisos para realizar modificaciones en el proyecto original. Por ello, la forma de hacer una 
 modificación es mediante una petición (pull request) pero el flujo de trabajo cambia en algunos aspectos.
 
