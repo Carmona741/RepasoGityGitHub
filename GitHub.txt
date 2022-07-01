@@ -27,3 +27,22 @@ Si se desea cargar un repositorio de Git local a GitHub entonces se deben seguir
   $git push origin master
 
 Y listo, ya deberían de estar actualizados tanto el repositorio local como el de GitHub (:
+
+**Clonar un repositorio de Git**
+
+Al momento de clonar un repositorio se crea una versión local actualizada local y nos podemos ahorrar el comando
+del paso 3 "agregar un origin en el repositorio local" pues se crea de manera automática.
+
+1. En GitHub ir al repositorio de interés y dar click en "fork". Esto creará una copia actualizada del repositorio
+que es importante destacar, es DIFERENTE del repositorio original, por lo que los pull y push serán entre la versión local
+y MI copia (o fork) de GitHub.
+
+2. Ir al fork del proyecto y dar click en code/https url ó SSH url
+
+3. Comando para clonar un repositorio.
+    $git clone <url>
+
+Listo (: ahora ya tienes tu propia copia del repositorio.
+
+Para hacer aportaciones al repositorio original consultar el documento "Flujo-de-trabajo-profesional.txt" 
+en el apartado **Pull request sin ser colaborador**. Esta aportación es una explicación detallada del paso número 2.
