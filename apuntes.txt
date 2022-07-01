@@ -47,6 +47,11 @@ Los archivos que no son nuevos (ya existen commits previos) se pueden agregar al
 al mismo tiempo con el comando 
     $git commit -am "descripcion"
 
+**Modificar el mensaje de un commit**
+Para modificar la descripción del último commit se ejecuta el siguiente comando
+    $git commit --amend
+Esto abrira un editor de texto en consola y se podrá realizar el cambio pertinentes
+
 **Remover un archivo del stage**
 En caso de que se desee eliminar un archivo del stage muy posiblemente porque se cometió un error, se ejecuta
     $git restore --staged  "nombre.extension"
