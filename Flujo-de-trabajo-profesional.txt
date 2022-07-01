@@ -1,0 +1,40 @@
+Normalmente en un flujo de trabajo profesional se tienen dos servidores principales: production server, staging server.
+donde el staging server es lo más parecido al production server y aquí se corren las pruebas de desarrollo 
+de nuestro proyecto y una vez que se aprueban, se mandan al production server.
+
+Pull Request
+Es una solicitud de aprovación de merge para algún proyecto. Esta es una característica propia de GitHub y 
+no de Git. 
+Aquí se puede ver las ramas involucradas en el merge, los commits a unir (puede ser uno o varios), las diferencias,
+designar a un contribuyente para que revise los cambios, agregar notas, abrir un chat, devolver el pull request
+o aprovarlo.
+Normalmente la persona que se encarga de aprovarlos se llama DevOps y es un perfil específico encargado 
+de administrar el entorno de desarrollo.
+
+Los pull request se utilizan para discutir cambios antes de mandarlos (normalmente) a la rama master/main.
+Entonces, el flujo de trabajo utilizando pull request es:
+
+1. Crear una rama "fix" en donde se realizarán los cambios pertinentes.
+2. Agregar los cambios a Git (commit) y mandar la rama a GitHub ($git push origin <rama>)
+3. Entrar a GitHub y crear un pull request
+    3.1 Repo/Pull Request/ New pull request
+    3.2 Rama izquierda: master, rama derecha: "fix_branch"
+
+Una vez estando en el entorno anterior, se puede agregar comentarios, colaboradores para que autoricen 
+los cambios, milestones (metas del proyecto) etc, y una vez terminada la configuración, se crea con click
+en "create pull request".
+
+**Pull request desde la perspectiva de colaborador**
+
+Cuando algún colaborador de nuestro proyecto nos agrega como "reviewer" en un pull request, nos aparecerá 
+una notificación en el mismo apartado de pull request donde podremos ver el creador del pull request y los comentarios.
+
+Haciendo click en el pull request se puede hacer una revisión de los cambios y solicitar nuevos cambios, dar feedback
+general o aprovarlos.
+
+Una vez que los cambios son aprovados por mí, como colaborador, al creador le aparecerá una palomita con mi 
+nombre indicando que apruebo los cambios, pero esto no implica que se ha realizado el merge a master.
+
+El merge a master lo puede realizar cualquier colaborador del proyecto simplemente haciendo click en "merge".
+Posterior a esto, nos da la opción de eliminar la rama <fix_branch> y esto dependerá del equipo de desarrollo.
+Hay quienes la borran y hay quienes no.
