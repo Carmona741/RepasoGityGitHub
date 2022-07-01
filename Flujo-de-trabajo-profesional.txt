@@ -38,3 +38,28 @@ nombre indicando que apruebo los cambios, pero esto no implica que se ha realiza
 El merge a master lo puede realizar cualquier colaborador del proyecto simplemente haciendo click en "merge".
 Posterior a esto, nos da la opción de eliminar la rama <fix_branch> y esto dependerá del equipo de desarrollo.
 Hay quienes la borran y hay quienes no.
+
+**Pull request sin ser colaborador**
+
+En proyectos de código abierto, suelen haber contribuyentes que únicamente pueden clonar el proyecto e irlo actualizando
+pero no tienen permisos para realizar modificaciones en el proyecto original. Por ello, la forma de hacer una 
+modificación es mediante una petición (pull request) pero el flujo de trabajo cambia en algunos aspectos.
+
+1. En GitHub, ir al repositorio de interes y click en "Fork" para clonarlo.
+2. Traer el repositorio a Git (Entorno local) haciendo las configuraciones pertinentes (conexión mediante HTML o SSH)
+3. Hacer los cambios en Git y subirlos a GitHub 
+    Nota: Los cambios se suben a MI COPIA del proyecto y no al proyecto original 
+4. GitHub detecta que mi repo está más actualizada que la repo original por lo que en automático me da 
+la opción de hacer un pull request, entonces hay que hacerlo y esperar una respuesta.
+5. Actualización de mi clonación del proyecto.
+    Para ir acutualizando mi proyecto se puede hacer simplemente un pull request del repositorio original al mío y listo,
+    o hacerlo desde consola.
+
+    Actualización de Fork desde consola
+    
+    5.1. Copiar link del repositorio ORIGINAL
+    5.2 Crear un remoto con el nombre de "upstream" (fuente nueva desde donde traera los cambios)
+    5.3 Traer los cambios a master desde el nuevo remoto   
+        $git pull upstream master
+    5.4 Enviarl los cambios a mi Fork
+        $git push origin master
